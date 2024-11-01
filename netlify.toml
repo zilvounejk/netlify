@@ -1,0 +1,10 @@
+[build]
+  # Define the directory where Netlify will look for the built frontend
+  publish = "dist"  # or "build" if using Create React App
+  # Define the directory for serverless functions
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
